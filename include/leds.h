@@ -517,7 +517,7 @@ class Dotstar : public LedDriver, public DmaClient
 		dmaConfigure(pio0, 0);
 		resetTime = _resetTime;
 
-		spi_init(_spi, 20000000);
+		spi_init(_spi, 12000000);
 		gpio_set_function(_clockpin, GPIO_FUNC_SPI);
 		gpio_set_function(_datapin, GPIO_FUNC_SPI);
 		bi_decl(bi_4pins_with_func(PICO_DEFAULT_SPI_RX_PIN, _datapin, _clockpin, PICO_DEFAULT_SPI_CSN_PIN, GPIO_FUNC_SPI));
